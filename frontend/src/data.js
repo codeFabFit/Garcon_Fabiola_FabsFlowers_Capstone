@@ -1,6 +1,7 @@
 // this is the data of the flowers
 
 // start with making consta data as an options and products as array
+// image dimentions are 679x829
 
 const data = {
     products: [
@@ -9,7 +10,7 @@ const data = {
             name: 'Always on my Mind Bouquet',
             slug: 'always-on-my-mind-bouquet',
             category: 'just because',
-            image: '/images/rose.jpg',
+            image: '',
             price: 80,
             countInStock: 10,
             numReviews: 5,
@@ -19,7 +20,7 @@ const data = {
             name: 'Victorian Romance',
             slug: 'victorian-romance',
             category: 'happy celebration',
-            image: '/images/lilles.jpg',
+            image: '',
             price: 77,
             countInStock: 10,
             numReviews: 3,
@@ -29,7 +30,7 @@ const data = {
             name: 'Making Me Blush Bouquet',
             slug: 'making-me-blush-bouquet',
             category: 'happy celebration',
-            image: '/images/lilles.jpg',
+            image: '',
             price: 150,
             countInStock: 10,
             numReviews: 8,
@@ -39,7 +40,7 @@ const data = {
             name: 'Bejeweled Beauty',
             slug: 'bejeweled-beauty',
             category: 'get well',
-            image: '/images/lilles.jpg',
+            image: '',
             price: 70,
             countInStock: 10,
             numReviews: 2,
@@ -49,18 +50,18 @@ const data = {
             name: 'Vision of Love',
             slug: 'vision-of-love',
             category: 'happy celebration',
-            image: '/images/lilles.jpg',
+            image: '',
             price: 50,
             countInStock: 10,
             numReviews: 4,
-            description: "Turn up the heat on your relationship with this sizzling bouquet of carnations and roses in a sparkling glass vase. It makes a spectacular gift for anniversary or any loving occasion. A mix of carnations and roses in shades of red and light pink. Delivered in a glass vase accented with pink satin ribbon.
+            description: "Turn up the heat on your relationship with this sizzling bouquet of carnations and roses in a sparkling glass vase. It makes a spectacular gift for anniversary or any loving occasion. A mix of carnations and roses in shades of red and light pink. Delivered in a glass vase accented with pink satin ribbon."
         
         },
         {
             name: 'Daisies and Sunbeams',
             slug: 'daisies-and-sunbeams',
             category: 'get well',
-            image: '/images/lilles.jpg',
+            image: '',
             price: 65,
             countInStock: 10,
             numReviews: 3,
@@ -70,3 +71,5 @@ const data = {
 
     ]
 }
+
+export default data 

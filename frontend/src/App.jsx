@@ -3,6 +3,8 @@
 // import viteLogo from '/vite.svg'
 // import './App.css'
 
+import data from "./data"
+
 function App() {
 
   return (
@@ -10,10 +12,21 @@ function App() {
     <div>
       <header>
         <a href="/">FabsFlowers</a>
+       </header>  
           <main>
-            List Products
+            <h1>Featured Flowers</h1>
+            {/* now import data so it will appear here */}
+            {
+              data.products.map(product => (<div key={product.id}>
+                <img src={product.image} alt={product.name} />
+                <p>{product.name}</p>
+                <p>{product.price}</p>
+                <p>{product.description}</p>
+
+              </div>))
+            }
           </main>
-      </header>
+      
     </div>
    
     </>
