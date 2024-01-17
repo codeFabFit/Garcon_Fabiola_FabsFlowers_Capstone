@@ -1,7 +1,10 @@
 import express from 'express';
 import data from './data.js';
+import cors from 'cors'
 
 const app = express();
+app.use(cors())
+
 // path 
 app.get('/api/products', (req, res) => {
     // here we are call the data from the backend
@@ -10,8 +13,11 @@ app.get('/api/products', (req, res) => {
     res.send(data.products)
 })
 
+
+
 const port = process.env.PORT || 5000
 // send the port that is going to listen to the call
 app.listen(port, () => {
     console.log(`serve at http://localhost:${port}`)
 })
+
