@@ -7,6 +7,7 @@ import data from "../data"
 function HomeView() {
   return (
     <div>
+      <h3>Featured Flowers</h3>
 {/* add the homeview information from app.jsx */}
 <div className="products">
             {
