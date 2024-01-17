@@ -71,5 +71,5 @@ const data = {
 
     ]
 }
-
+// export data so it will show were you call it
 export default data 
