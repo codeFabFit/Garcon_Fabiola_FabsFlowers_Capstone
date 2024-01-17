@@ -13,7 +13,7 @@ function HomeView() {
             {
               data.products.map(product => 
                   (<div className="product" key={product.slug}>
-                    <Link to={`/products/${product.id}`}>
+                    <Link to={`/product/${product.id}`}>
                 <img src={product.image} alt={product.name} />
                 </Link>
                 <div className="prod-info">
