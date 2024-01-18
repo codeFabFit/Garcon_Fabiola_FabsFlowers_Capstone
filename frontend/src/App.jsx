@@ -4,12 +4,14 @@
 // import './App.css'
 
 // import data from "./data"
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import {BrowserRouter, Route, Link, Routes} from 'react-router-dom'
 import HomeView from "./components/HomeView"
 import ProductView from './components/ProductView'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
-import {LinkContainer} from 'react-router-bootstrap'
+// import {LinkContainer} from 'react-router-bootstrap'
+// removed because it wasnt rendering products 
+
 
 
 function App() {
@@ -17,18 +19,20 @@ function App() {
   return (
     
     <BrowserRouter>
-    <div className='d-flex flex-colum site-container'>
+    <div className='d-flex flex-column site-container'>
       <header>
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="dark" variant='dark'>
           <Container>
-            <LinkContainer to="/">
-            <Navbar.Brand>FabsFlowers</Navbar.Brand>
-            </LinkContainer>
+            {/* <LinkContainer to="/"> */}
+            <Link to="/">FabsFlowers</Link>
+            {/* </LinkContainer> */}
           </Container>
         </Navbar>
         {/* you want to change from a href to link stop page refresh */}
        {/* we are removing this one below bc we are using bootstrap */}
-        {/* <Link to="/">FabsFlowers</Link> */}
+        {/*  */}
+
+        {/* <Navbar.Brand>FabsFlowers</Navbar.Brand> */}
        </header>  
           <main>
 
