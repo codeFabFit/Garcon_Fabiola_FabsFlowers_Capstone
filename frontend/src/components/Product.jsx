@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Product(props) {
     const {product} = props
     return (
-        <Card className="product" key={product.slug}>
+        <Card className="product">
             <Link to={`/product/${product.slug}`}>
                 <img src={product.image} className="card-img-top" alt={product.name}/>
             </Link>
@@ -14,12 +14,12 @@ function Product(props) {
                 <Link to={`/product/${product.slug}`}>
                     <Card.Title>{product.name}</Card.Title>
                 </Link>
-             </Card.Body>    
-            
+               
                 <Card.Text>
                     <strong>${product.price}</strong>
                     <Button>Add to Cart</Button>
                 </Card.Text>
+                </Card.Body>  
         </Card>
     )
 }

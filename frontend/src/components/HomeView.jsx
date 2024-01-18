@@ -67,7 +67,7 @@ function HomeView() {
           
             <Row>
             {products.map((product) => (
-              <Col sm={6} md={3} lg={2} className="mb-3">
+              <Col key={product.slug} sm={6} md={3} lg={2} className="mb-3">
                 <Product product={product}></Product>
               </Col>
             ))}
