@@ -1,16 +1,17 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-key */
 // this is the home screen view
 
 // import React from 'react'
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer} from "react";
 import logger from 'use-reducer-logger'
 // import { Link } from "react-router-dom";
 // import data from "../data";
 // once you have added setProducts from useState
 // you can remove the imported data cause its reading from back end
 import axios from "axios";
-import Row from "react-bootstrap"
-import Col from "react-bootstrap"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 import Product from "./Product";
 
 
@@ -66,7 +67,7 @@ function HomeView() {
           
             <Row>
             {products.map((product) => (
-              <Col sm={6} md={4} lg={3} className="mb-3">
+              <Col sm={6} md={3} lg={2} className="mb-3">
                 <Product product={product}></Product>
               </Col>
             ))}
