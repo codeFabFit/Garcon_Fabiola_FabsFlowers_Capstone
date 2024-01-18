@@ -13,6 +13,7 @@ import { Badge, ListGroup, ListGroupItem } from 'react-bootstrap'
 import { Card } from 'react-bootstrap'
 import {Button} from 'react-bootstrap'
 
+
 const reducer = (state, action) => {
   switch (action.type) {
     case 'FETCH_REQUEST':
@@ -72,7 +73,9 @@ function ProductView() {
         <Col md={3}>
           <ListGroup variant="flush">
               <ListGroup.Item>
+               
                 <h1>{product.name}</h1>
+                
               </ListGroup.Item>
               <ListGroup.Item>
                 Price : $ {product.price}

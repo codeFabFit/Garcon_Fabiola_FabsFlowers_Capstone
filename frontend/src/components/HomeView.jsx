@@ -13,6 +13,8 @@ import axios from "axios";
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Product from "./Product";
+import LoadingBox from "./LoadingBox";
+import MessageBox from "./MessageBox";
 
 
  
@@ -59,12 +61,19 @@ function HomeView() {
     };
     fetchData();
   }, []);
-
+ 
+  
   const isLoaded =   (  <>
         <h3>Featured Flowers</h3>
         {/* add the homeview information from app.jsx */}
         <div className="products">
           
+          {loading ? (
+            <LoadingBox />
+          ): error ? (
+            <MessageBox variant="danger">{error}</MessageBox>
+          ): 
+              (
             <Row>
             {products.map((product) => (
               <Col key={product.slug} sm={6} md={3} lg={2} className="mb-3">
@@ -72,7 +81,7 @@ function HomeView() {
               </Col>
             ))}
             </Row>
-
+)}
         </div>
         
       </>
