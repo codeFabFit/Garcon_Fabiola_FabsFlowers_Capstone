@@ -2,6 +2,7 @@
 
 // import React from 'react'
 import { useEffect, useReducer, useState } from "react";
+import logger from 'use-reducer-logger'
 import { Link } from "react-router-dom";
 // import data from "../data";
 // once you have added setProducts from useState
@@ -26,7 +27,7 @@ const reducer = (state, action) => {
 function HomeView() {
 
 // adding useReducer and getting rid of useState
-  const [{loading, error, products}, dispatch] = useReducer(reducer, {
+  const [{loading, error, products}, dispatch] = useReducer(logger(reducer), {
     products: [],
     loading: true,
     error: '',
