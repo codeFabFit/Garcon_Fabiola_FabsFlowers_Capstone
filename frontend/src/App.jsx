@@ -37,7 +37,7 @@ function App() {
           <main>
 
             {/* add routing here */}
-            <Container>
+            <Container className='mt-3'>
                   <Routes>
                   <Route path="/product/:slug" element={<ProductView />}></Route>
                   <Route path="/" element={<HomeView />}></Route>

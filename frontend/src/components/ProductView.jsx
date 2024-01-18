@@ -8,9 +8,10 @@ import { useReducer } from 'react'
 import axios from 'axios'
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-import { ListGroup } from 'react-bootstrap'
-
-
+import { Badge, ListGroup, ListGroupItem } from 'react-bootstrap'
+// import CardBody from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -63,13 +64,13 @@ function ProductView() {
       <Row>
         <Col md={6}>
           <img
-          className='img-large'
+          className="img-large"
           src={product.image} 
           alt={product.name}
           ></img>
         </Col>
         <Col md={3}>
-          <ListGroup variant='flush'>
+          <ListGroup variant="flush">
               <ListGroup.Item>
                 <h1>{product.name}</h1>
               </ListGroup.Item>
@@ -82,10 +83,39 @@ function ProductView() {
               </ListGroup.Item>
           </ListGroup>
         </Col>
-        <Col md={3}></Col>
+        <Col md={3}>
+          <Card>
+            <Card.Body>
+              <ListGroup variant="flush">
+                <ListGroup.Item>
+                      <Row>
+                        <Col>Status:</Col>
+                        <Col>
+                        {product.countInStock > 0 ? (
+                        <Badge bg="success">In Stock</Badge>
+                        ):(
+                        <Badge bg="danger">Out of Stock</Badge>
+                        )}</Col>
+                      </Row>
+                </ListGroup.Item>      
+              </ListGroup>
+
+                    {product.countInStock > 0 && (
+                      <ListGroup.Item>
+                        <div className='d-grid'>
+                            <Button variant='primary'>
+                              Add to Cart
+                            </Button>
+                        </div>
+                      </ListGroup.Item>
+                    )}
+
+            </Card.Body>
+          </Card>
+        </Col>
       </Row>
     </div>
   )
 }
 
-export default ProductView
+export default ProductView;

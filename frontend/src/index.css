@@ -53,6 +53,7 @@ header a {
 
 main {
   padding: 1rem;
+  flex: 1;
 }
 
 .products {
@@ -66,7 +67,7 @@ main {
   margin: 1rem;
 }
 
-.product image {
+.product-image {
   height: 679px;
   width: 829px;
 
