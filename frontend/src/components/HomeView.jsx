@@ -1,13 +1,18 @@
+/* eslint-disable react/jsx-key */
 // this is the home screen view
 
 // import React from 'react'
 import { useEffect, useReducer, useState } from "react";
 import logger from 'use-reducer-logger'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import data from "../data";
 // once you have added setProducts from useState
 // you can remove the imported data cause its reading from back end
 import axios from "axios";
+import Row from "react-bootstrap"
+import Col from "react-bootstrap"
+import Product from "./Product";
+
 
  
 const reducer = (state, action) => {
@@ -45,7 +50,7 @@ function HomeView() {
         dispatch({type: 'FETCH_SUCCESS', payload: result.data})
 
       } catch (error) {
-        dispatch({type: 'FECTH_FAIL', payload: error.message})
+        dispatch({type: 'FETCH_FAIL', payload: error.message})
       }
       
       // setProducts(result.data);
@@ -58,31 +63,22 @@ function HomeView() {
         <h3>Featured Flowers</h3>
         {/* add the homeview information from app.jsx */}
         <div className="products">
-          {
-            products.map((product) => (
-              <div className="product" key={product.slug}>
-                <Link to={`/products/${product.slug}`}>
-                  <img src={product.image} alt={product.name} />
-                </Link>
-                <div className="prod-info">
-                  <Link to={`/products/${product.slug}`}>
-                    {/* added a link to make it so you click the name it will bring you to that page info */}
-                    <p>{product.name}</p>
-                  </Link>
-                  <p>{product.price}</p>
-                  {/* dont need description just yet */}
-                  {/* <p>{product.description}</p> */}
-                  <button className="btn">Add to Cart</button>
-                </div>
-              </div>
+          
+            <Row>
+            {products.map((product) => (
+              <Col sm={6} md={4} lg={3} className="mb-3">
+                <Product product={product}></Product>
+              </Col>
             ))}
+            </Row>
+
         </div>
-        ;
+        
       </>
   )
 
 
   return <div>{products ? isLoaded : <div>loading FabsFlowers ...</div>}</div>;
-}
+            }
 
 export default HomeView;
