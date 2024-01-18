@@ -13,7 +13,7 @@ import { ListGroup } from 'react-bootstrap'
 
 
 const reducer = (state, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'FETCH_REQUEST':
       return {...state, loading: true}
       case 'FETCH_SUCCESS':
@@ -43,7 +43,7 @@ function ProductView() {
         // adding dispatch
         dispatch({type: 'FETCH_REQUEST'})
         try {
-          const result = await axios.get(`http://localhost:5000/api/products/slug/${slug}`);
+          const result = await axios.get(`api/products/slug/${slug}`);
           dispatch({type: 'FETCH_SUCCESS', payload: result.data})
   
         } catch (error) {
@@ -54,7 +54,7 @@ function ProductView() {
       fetchData();
     }, [slug]);
   
-  return loading? (
+  return loading ? (
     <div>Loading Flowers ...</div>
   ) : error ? (
     <div>{error}</div>
@@ -64,7 +64,9 @@ function ProductView() {
         <Col md={6}>
           <img
           className='img-large'
-          src={product.image} alt={product.name}></img>
+          src={product.image} 
+          alt={product.name}
+          ></img>
         </Col>
         <Col md={3}>
           <ListGroup variant='flush'>

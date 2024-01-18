@@ -15,14 +15,14 @@ app.get('/api/products', (req, res) => {
 
 // getting data from back end using specific slug of product to show data
 app.get('/api/products/slug/:slug', (req, res) => {
-    const product = data.products.find((x) => x.slug === req.params.slug)
+    const product = data.products.find((x) => x.slug === req.params.slug);
     // catching error
     if(product) {
         res.send(product);
     } else {
-        res.status(404).send({message: "No Product Found"})
+        res.status(404).send({message: "No Product Found"});
     }
-})
+});
 
 
 

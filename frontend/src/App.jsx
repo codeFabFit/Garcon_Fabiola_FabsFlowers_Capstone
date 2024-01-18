@@ -39,7 +39,7 @@ function App() {
             {/* add routing here */}
             <Container>
                   <Routes>
-                  <Route path="/products/:slug" element={<ProductView />}></Route>
+                  <Route path="/product/:slug" element={<ProductView />}></Route>
                   <Route path="/" element={<HomeView />}></Route>
                 </Routes>
           </Container>
