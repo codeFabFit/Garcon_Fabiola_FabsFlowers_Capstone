@@ -12,6 +12,8 @@ import { Badge, ListGroup, ListGroupItem } from 'react-bootstrap'
 // import CardBody from 'react-bootstrap'
 import { Card } from 'react-bootstrap'
 import {Button} from 'react-bootstrap'
+import LoadingBox from '../components/LoadingBox'
+import MessageBox from '../components/MessageBox'
 
 
 const reducer = (state, action) => {
@@ -29,7 +31,7 @@ const reducer = (state, action) => {
 
 function ProductView() {
 
-    const params = useParams;
+    const params = useParams();
     const {slug} = params;
 
     const [{loading, error, product}, dispatch] = useReducer(reducer, {
@@ -57,18 +59,16 @@ function ProductView() {
     }, [slug]);
   
   return loading ? (
-    <div>Loading Flowers ...</div>
-  ) : error ? (
-    <div>{error}</div>
-  ) : (
+    <LoadingBox />
+  ): error ? (
+    <MessageBox variant="danger">{error}</MessageBox>
+  ): 
     <div>
       <Row>
         <Col md={6}>
           <img
           className="img-large"
-          src={product.image} 
-          alt={product.name}
-          ></img>
+          src={ product.image} alt={product.name}></img>
         </Col>
         <Col md={3}>
           <ListGroup variant="flush">
@@ -98,7 +98,8 @@ function ProductView() {
                         <Badge bg="success">In Stock</Badge>
                         ):(
                         <Badge bg="danger">Out of Stock</Badge>
-                        )}</Col>
+                        )}
+                        </Col>
                       </Row>
                 </ListGroup.Item>      
               </ListGroup>
@@ -118,7 +119,7 @@ function ProductView() {
         </Col>
       </Row>
     </div>
-  )
+  
 }
 
 export default ProductView;

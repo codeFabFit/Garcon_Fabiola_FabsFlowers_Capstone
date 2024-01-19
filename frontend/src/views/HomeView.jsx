@@ -12,9 +12,9 @@ import logger from 'use-reducer-logger'
 import axios from "axios";
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-import Product from "./Product";
-import LoadingBox from "./LoadingBox";
-import MessageBox from "./MessageBox";
+import Product from "../components/Product";
+import LoadingBox from "../components/LoadingBox";
+import MessageBox from "../components/MessageBox";
 
 
  
@@ -88,7 +88,7 @@ function HomeView() {
   )
 
 
-  return <div>{products ? isLoaded : <div>loading FabsFlowers ...</div>}</div>;
+  return <div>{products ? isLoaded : <div>loading ...</div>}</div>;
             }
 
 export default HomeView;

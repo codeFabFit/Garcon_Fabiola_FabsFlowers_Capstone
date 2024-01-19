@@ -5,8 +5,8 @@
 
 // import data from "./data"
 import {BrowserRouter, Route, Link, Routes} from 'react-router-dom'
-import HomeView from "./components/HomeView"
-import ProductView from './components/ProductView'
+import HomeView from "./views/HomeView"
+import ProductView from './views/ProductView'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 // import {LinkContainer} from 'react-router-bootstrap'
