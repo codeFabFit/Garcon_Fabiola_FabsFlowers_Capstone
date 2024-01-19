@@ -3,7 +3,7 @@
 
 // import React from 'react'
 import { useParams } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useReducer } from 'react'
 import axios from 'axios'
 import Row from "react-bootstrap/Row"
@@ -14,6 +14,7 @@ import { Card } from 'react-bootstrap'
 import {Button} from 'react-bootstrap'
 import LoadingBox from '../components/LoadingBox'
 import MessageBox from '../components/MessageBox'
+
 
 
 const reducer = (state, action) => {
@@ -33,6 +34,8 @@ function ProductView() {
 
     const params = useParams();
     const {slug} = params;
+
+const [selectedImage, setSelectedImage] = useState('')
 
     const [{loading, error, product}, dispatch] = useReducer(reducer, {
       product: [],
@@ -65,28 +68,34 @@ function ProductView() {
   ): 
     <div>
       <Row>
-        <Col md={6}>
-          <img
-          className="img-large"
-          src={ product.image} alt={product.name}></img>
+        <Card>
+        <Col md={12}>
+          <Card.Img variant="top" className="img-large"
+          src={product.image} alt={product.name}>
+          </Card.Img>
         </Col>
-        <Col md={3}>
+        </Card>
+        <Col md={6}>
           <ListGroup variant="flush">
               <ListGroup.Item>
-               
-                <h1>{product.name}</h1>
+               <h1>hello</h1>
+                {product.name}
                 
               </ListGroup.Item>
               <ListGroup.Item>
                 Price : $ {product.price}
               </ListGroup.Item>
+
+    
+
+
               <ListGroup.Item>
                 Description:
                 <p>{product.description}</p>
               </ListGroup.Item>
           </ListGroup>
         </Col>
-        <Col md={3}>
+        <Col md={6}>
           <Card>
             <Card.Body>
               <ListGroup variant="flush">

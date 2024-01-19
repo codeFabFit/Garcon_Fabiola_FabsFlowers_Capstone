@@ -19,11 +19,12 @@ function App() {
   return (
     
     <BrowserRouter>
-    <div className='d-flex flex-column site-container'>
+    <div className='d-inline-flex flex-column site-container'>
       <header>
         <Navbar bg="dark" variant='dark'>
           <Container>
             {/* <LinkContainer to="/"> */}
+            
             <Link to="/">FabsFlowers</Link>
             {/* </LinkContainer> */}
           </Container>

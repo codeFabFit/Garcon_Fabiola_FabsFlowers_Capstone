@@ -64,6 +64,8 @@ function HomeView() {
  
   
   const isLoaded =   (  <>
+<img className="logo-img" src="https://static.vecteezy.com/system/resources/previews/008/420/922/original/flower-alphabet-f-logo-vector.jpg"></img>
+  <p>FabsFlowers <code>MISSION</code> is provide our customers with quality flowers and floral arrangements at a fair price. We will strive to match and surpass the expectations that our customers expect from us and our products</p>
         <h3>Featured Flowers</h3>
         {/* add the homeview information from app.jsx */}
         <div className="products">
