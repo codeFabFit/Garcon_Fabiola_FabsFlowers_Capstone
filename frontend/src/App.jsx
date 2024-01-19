@@ -8,14 +8,18 @@ import {BrowserRouter, Route, Link, Routes} from 'react-router-dom'
 import HomeView from "./views/HomeView"
 import ProductView from './views/ProductView'
 import Navbar from 'react-bootstrap/Navbar'
+// import { Badge, Nav } from 'react-bootstrap'
 import Container from 'react-bootstrap/Container'
+// import { useContext } from 'react'
+// import { Store } from './Store'
+
 // import {LinkContainer} from 'react-router-bootstrap'
 // removed because it wasnt rendering products 
 
 
 
 function App() {
-
+  
   return (
     
     <BrowserRouter>
@@ -27,6 +31,7 @@ function App() {
             
             <Link to="/">FabsFlowers</Link>
             {/* </LinkContainer> */}
+            
           </Container>
         </Navbar>
         {/* you want to change from a href to link stop page refresh */}

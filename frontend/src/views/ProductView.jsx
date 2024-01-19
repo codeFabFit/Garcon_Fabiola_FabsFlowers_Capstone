@@ -14,6 +14,7 @@ import { Card } from 'react-bootstrap'
 import {Button} from 'react-bootstrap'
 import LoadingBox from '../components/LoadingBox'
 import MessageBox from '../components/MessageBox'
+// import { Store } from '../Store'
 // import Product from '../components/Product'
 
 
@@ -63,6 +64,14 @@ const [selectedImage, setSelectedImage] = useState('')
       fetchData();
     }, [slug]);
   
+// adding the cart handler
+
+// const {state, dispatch: ctxDispatch} = useContext(Store);
+// const addToCartHandler = () =>{
+//   ctxDispatch({type:'CART_ADD_ITEM', payload: {...product, quantity: 1}})
+// }
+
+
   return loading ? (
     <LoadingBox />
   ): error ? (
@@ -72,7 +81,7 @@ const [selectedImage, setSelectedImage] = useState('')
       <Row>
         <Card>
         <Col md={12}>
-          <Card.Img variant="top" className="img-large"
+          <Card.Img variant="top" className="img-medium"
           src={product.image} alt={product.name}>
           </Card.Img>
         </Col>
@@ -80,7 +89,7 @@ const [selectedImage, setSelectedImage] = useState('')
         <Col md={6}>
           <ListGroup variant="flush">
               <ListGroup.Item>
-               <h1>hello
+               <h1>
                 {product.name}
                 </h1>
               </ListGroup.Item>
