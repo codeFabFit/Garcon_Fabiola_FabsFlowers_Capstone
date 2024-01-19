@@ -79,15 +79,11 @@ main {
 }
 
 
-.img-large {
-  display: flex;
-  justify-content: center;
-  
-}
 
 .logo-img{
   display: flex;
   justify-content: center;
   height: 250px;
+  padding: 10px;
   
 }
