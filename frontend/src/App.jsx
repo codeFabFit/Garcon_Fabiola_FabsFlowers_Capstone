@@ -10,6 +10,8 @@ import ProductView from './views/ProductView'
 import Navbar from 'react-bootstrap/Navbar'
 // import { Badge, Nav } from 'react-bootstrap'
 import Container from 'react-bootstrap/Container'
+import { StoreProvider } from './context-and-reducer/StoreContext'
+import CartView from './views/CartView'
 // import { useContext } from 'react'
 // import { Store } from './Store'
 
@@ -21,7 +23,7 @@ import Container from 'react-bootstrap/Container'
 function App() {
   
   return (
-    
+    <StoreProvider>
     <BrowserRouter>
     <div className='d-inline-flex flex-column site-container'>
       <header>
@@ -30,6 +32,8 @@ function App() {
             {/* <LinkContainer to="/"> */}
             
             <Link to="/">FabsFlowers</Link>
+            <Link to="/cart">Cart</Link>
+
             {/* </LinkContainer> */}
             
           </Container>
@@ -47,6 +51,7 @@ function App() {
                   <Routes>
                   <Route path="/product/:slug" element={<ProductView />}></Route>
                   <Route path="/" element={<HomeView />}></Route>
+                  <Route path="/cart" element={<CartView/>}></Route>
                 </Routes>
           </Container>
       </main>
@@ -57,7 +62,7 @@ function App() {
       </footer>
        </div>    
    </BrowserRouter>
-    
+    </StoreProvider>
   )
 }
 
