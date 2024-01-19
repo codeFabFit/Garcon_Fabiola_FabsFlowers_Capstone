@@ -14,7 +14,6 @@ import { Card } from 'react-bootstrap'
 import {Button} from 'react-bootstrap'
 import LoadingBox from '../components/LoadingBox'
 import MessageBox from '../components/MessageBox'
-// import { Store } from '../Store'
 // import Product from '../components/Product'
 
 
@@ -47,13 +46,11 @@ const [selectedImage, setSelectedImage] = useState('')
   
     // useEffect using same from homeview
     useEffect(() => {
-      console.log(slug)
       const fetchData = async () => {
         // adding dispatch
         dispatch({type: 'FETCH_REQUEST'})
         try {
           const result = await axios.get(`http://localhost:5000/api/products/slug/${slug}`);
-          console.log(result.data)
           dispatch({type: 'FETCH_SUCCESS', payload: result.data})
   
         } catch (error) {
@@ -96,6 +93,9 @@ const [selectedImage, setSelectedImage] = useState('')
               <ListGroup.Item>
                 Price : $ {product.price}
               </ListGroup.Item>
+
+    
+
 
               <ListGroup.Item>
                 Description:

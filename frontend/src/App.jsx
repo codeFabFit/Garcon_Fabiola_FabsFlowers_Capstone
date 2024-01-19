@@ -43,7 +43,7 @@ function App() {
           <main>
 
             {/* add routing here */}
-            <Container className='md-3'>
+            <Container className='mt-3'>
                   <Routes>
                   <Route path="/product/:slug" element={<ProductView />}></Route>
                   <Route path="/" element={<HomeView />}></Route>
@@ -52,7 +52,7 @@ function App() {
       </main>
       <footer>
         <div className='text-center'>
-          All Rights Reserved @ Fabiola Garcon || Mern Developer
+          All Rights Reserved @ Fabiola Garcon
         </div>
       </footer>
        </div>    
