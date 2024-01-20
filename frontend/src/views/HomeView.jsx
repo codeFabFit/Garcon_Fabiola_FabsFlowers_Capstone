@@ -90,9 +90,7 @@ function HomeView() {
         </div>
         
       </>
-  )
-
-
+  ) 
   return <div>{products ? isLoaded : <div>loading ...</div>}</div>;
 }
 

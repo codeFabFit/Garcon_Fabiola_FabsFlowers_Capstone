@@ -119,7 +119,10 @@ const [selectedImage, setSelectedImage] = useState('')
                     {product.countInStock > 0 && (
                       <ListGroup.Item>
                         <div className='d-grid'>
-                            <Button variant='primary'>
+                            <Button 
+                            name='add to cart'
+                            variant='primary'
+                            >
                               Add to Cart
                             </Button>
                         </div>
