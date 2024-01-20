@@ -11,7 +11,7 @@ import Navbar from 'react-bootstrap/Navbar'
 // import { Badge, Nav } from 'react-bootstrap'
 import Container from 'react-bootstrap/Container'
 import { StoreProvider } from './context-and-reducer/StoreContext'
-import CartView from './views/CartView'
+import CartView from './components/CartView'
 // import { useContext } from 'react'
 // import { Store } from './Store'
 

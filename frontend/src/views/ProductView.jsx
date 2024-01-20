@@ -61,12 +61,7 @@ const [selectedImage, setSelectedImage] = useState('')
       fetchData();
     }, [slug]);
   
-// adding the cart handler
 
-// const {state, dispatch: ctxDispatch} = useContext(Store);
-// const addToCartHandler = () =>{
-//   ctxDispatch({type:'CART_ADD_ITEM', payload: {...product, quantity: 1}})
-// }
 
 
   return loading ? (

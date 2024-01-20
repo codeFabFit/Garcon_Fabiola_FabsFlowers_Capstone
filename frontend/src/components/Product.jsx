@@ -3,17 +3,20 @@
 import { useContext } from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { StoreContext } from "../context-and-reducer/StoreContext";
+import { StoreContext, StoreProvider } from "../context-and-reducer/StoreContext";
 
 function Product(props) {
     const {product} = props
     const {addToCart} = useContext(StoreContext);
 
-    const handleAdd = () => {
+    const handleAddToCart = (e) => {
+        e.preventDefault();
         addToCart(product);
 
     }
+
     return (
+        <StoreProvider>
         <Card className="product">
             <Link to={`/product/${product.slug}`}>
                 <img src={product.image} className="card-img-top" alt={product.name}/>
@@ -25,11 +28,13 @@ function Product(props) {
                
                 <Card.Text>
                     <strong>${product.price}</strong>
-                    <Button onClick={handleAdd}>Add to Cart</Button>
+                    <Button onClick={handleAddToCart}>Add to Cart</Button>
                 </Card.Text>
                 </Card.Body>  
         </Card>
+</StoreProvider>
     )
+
 }
 
 export default Product;
