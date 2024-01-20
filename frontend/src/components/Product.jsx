@@ -32,7 +32,7 @@ function Product(props) {
                 </Card.Text>
                 </Card.Body>  
         </Card>
-</StoreProvider>
+        </StoreProvider>
     )
 
 }

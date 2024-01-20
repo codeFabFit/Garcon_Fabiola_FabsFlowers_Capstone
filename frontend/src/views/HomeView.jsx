@@ -79,7 +79,10 @@ function HomeView() {
             <Row>
             {products.map((product) => (
               <Col key={product.slug} sm={6} md={3} lg={2} className="mb-3">
-                <Product product={product}></Product>
+                
+                <Product 
+               
+                product={product}></Product>
               </Col>
             ))}
             </Row>
@@ -91,6 +94,6 @@ function HomeView() {
 
 
   return <div>{products ? isLoaded : <div>loading ...</div>}</div>;
-            }
+}
 
 export default HomeView;

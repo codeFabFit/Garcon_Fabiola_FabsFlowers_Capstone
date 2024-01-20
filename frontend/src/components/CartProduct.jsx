@@ -1,6 +1,7 @@
 
 
-const CartProduct = ({ product }) => {
+const CartProduct = ({ children }) => {
+
   return (
     <div className="mx-auto px-8 border-gray-200 ">
       <img src={product.image} alt={product.name} />
