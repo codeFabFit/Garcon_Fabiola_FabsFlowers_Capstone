@@ -3,6 +3,7 @@ import data from './data.js';
 import cors from 'cors'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
+import seedRouter from './Routes/seedRoutes.js';
 
 // connecting mongoose with mongodb 
 dotenv.config();
@@ -17,6 +18,7 @@ mongoose
 })
 
 const app = express();
+app.use('/api/seed', seedRouter )
 app.use(cors())
 
 // path 
