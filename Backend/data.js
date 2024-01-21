@@ -7,7 +7,7 @@ const data = {
     products: [
         // each product is an object
         {
-            _id: "1",
+            // _id: "1",
             name: 'Always on my Mind Bouquet',
             slug: 'always-on-my-mind-bouquet',
             category: 'just because',
@@ -18,7 +18,7 @@ const data = {
             description: "A dozen gorgeous red roses are the perfect romantic gift to send to the one who's always on your mind and in your heart. Say <code>I love you</code> by sending this lovely arrangement of twelve radiant red roses and fresh greens delivered in a beautiful spring garden vase. Love always"
         },
         {
-            _id: "2",
+            // _id: "2",
             name: 'Victorian Romance',
             slug: 'victorian-romance',
             category: 'happy celebration',
@@ -29,7 +29,7 @@ const data = {
             description: "Romance blossoms beautifully within this elegant bouquet. The serenity and innocence of cream-colored roses is in delightful juxtaposition with lavender waxflower and fresh ivy greens. It's as romantic as a stroll through the English countryside. A dozen crème roses, lavender waxflower and ivy are perfectly arranged in a serenity glass vase."
         },
         {
-            _id: "3",
+            // _id: "3",
             name: 'Making Me Blush Bouquet',
             slug: 'making-me-blush-bouquet',
             category: 'happy celebration',
@@ -40,7 +40,7 @@ const data = {
             description: "It's fun to be flirty! Send a dozen roses to the one you love and she just might make you blush. Especially if the dozen roses in question are this gorgeous! This arrangement is sweet and innocent as can be. Of course, it's a bit sassy and a whole lot sexy, as well. Sending a dozen perfectly pink roses and white limonium arranged in a glass vase to the woman you love shows that you know how much fun love is! And every woman appreciates that!"
         },
         {
-            _id: "4",
+            // _id: "4",
             name: 'Bejeweled Beauty',
             slug: 'bejeweled-beauty',
             category: 'get well',
@@ -51,7 +51,7 @@ const data = {
             description: "The serenity of the color blue along with the purity of intention symbolized by white will let the family know you are sending your calm strength to them during these difficult times. Blooms such as crème roses, graceful white oriental lilies, white alstroemeria, a white disbud mum, purple statice and lavender limonium are accented by seeded eucalyptus and salal in a stunning cobalt blue glass vase"
         },
         {
-            _id: "5",
+            // _id: "5",
             name: 'Vision of Love',
             slug: 'vision-of-love',
             category: 'happy celebration',
@@ -63,7 +63,7 @@ const data = {
         
         },
         {
-            _id: "6",
+            // _id: "6",
             name: 'Daisies and Sunbeams',
             slug: 'daisies-and-sunbeams',
             category: 'get well',
