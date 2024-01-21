@@ -8,10 +8,11 @@ import {BrowserRouter, Route, Link, Routes} from 'react-router-dom'
 import HomeView from "./views/HomeView"
 import ProductView from './views/ProductView'
 import Navbar from 'react-bootstrap/Navbar'
-// import { Badge, Nav } from 'react-bootstrap'
+import { Badge, Nav } from 'react-bootstrap'
 import Container from 'react-bootstrap/Container'
 import { StoreProvider } from './context-and-reducer/StoreContext'
 import CartView from './components/CartView'
+// import { useContext } from 'react'
 // import { useContext } from 'react'
 // import { Store } from './Store'
 
@@ -21,7 +22,7 @@ import CartView from './components/CartView'
 
 
 function App() {
-  
+
   return (
     <StoreProvider>
     <BrowserRouter>
@@ -32,8 +33,14 @@ function App() {
             {/* <LinkContainer to="/"> */}
             
             <Link to="/">FabsFlowers</Link>
-            <Link to="/cart">Cart</Link>
-
+            <Nav>
+            <Link to="/cart">
+              Cart
+              <span>
+                <Badge pill bg="danger">{CartView.length}</Badge>
+              </span>
+              </Link>
+</Nav>
             {/* </LinkContainer> */}
             
           </Container>

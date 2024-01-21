@@ -64,7 +64,7 @@ const [selectedImage, setSelectedImage] = useState('')
 
 // handle addto cart
 
-const handleAddToCart = (e) => {
+const handleAdd = (e) => {
   e.preventDefault();
   console.log(product)
   
@@ -128,7 +128,7 @@ const handleAddToCart = (e) => {
                             <Button 
                             name='add to cart'
                             variant='primary'
-                            onClick={handleAddToCart}
+                            onClick={handleAdd}
                             >
                               Add to Cart
                             </Button>

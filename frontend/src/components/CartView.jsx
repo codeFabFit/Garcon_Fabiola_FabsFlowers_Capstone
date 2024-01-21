@@ -22,7 +22,8 @@ const CartView = () => {
       justify-between mt-2 
       py-6 px-10 text-xl f
       ont-medium'>
-        <CardBody>hello
+        <CardBody>
+          <span>Thanks For Shopping With Us</span>
         <h3>Your Cart</h3>
         <span>Total: $ {total}</span>
     
