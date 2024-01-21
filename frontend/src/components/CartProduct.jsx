@@ -5,13 +5,14 @@ import { PropTypes } from "prop-types";
 
 const CartProduct = ({ product }) => {
   const {addToCart} = useContext(StoreContext)
-    const handleAdd = () => {
+    const handleAddToCart = () => {
           addToCart(product);
+          console.log(product)
     }
 
   return (
     <div className="mx-auto px-8 border-gray-200 ">
-      <img src={product.image} alt={product.name} />
+      <img src={product.image} alt={product.name}/>
    <div className="flex flex-row item">
       <div>
         <p className="text-xl">{product.name}</p>
@@ -20,7 +21,7 @@ const CartProduct = ({ product }) => {
 </div>
 <div>
         <button className="bg-indigo-50 text-white text-lg font-medium rounded-full p-4" 
-        onClick={handleAdd}>Add to Cart</button>
+        onClick={handleAddToCart}>Add to Cart</button>
 </div>
     </div>
   )

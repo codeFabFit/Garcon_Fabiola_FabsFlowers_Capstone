@@ -9,10 +9,13 @@ function Product(props) {
     const {product} = props
     const {addToCart} = useContext(StoreContext);
 
+
+
+    // addtocart is not a function error in console
     const handleAddToCart = (e) => {
         e.preventDefault();
-        addToCart(product);
-
+        console.log(product)
+        addToCart;
     }
 
     return (

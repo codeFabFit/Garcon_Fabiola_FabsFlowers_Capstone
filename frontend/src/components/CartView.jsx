@@ -1,5 +1,6 @@
 // import React from 'react'
 import { useContext } from 'react'
+// import { Navbar } from 'react-bootstrap';
 // import { CardBody} from 'react-bootstrap'
 // import Product from './CartProduct'
 import { StoreContext } from '../context-and-reducer/StoreContext'
@@ -14,11 +15,8 @@ const CartView = () => {
     const {products, total} = useContext(StoreContext);
   return (
      <div>
-      <div 
-      className='flex flex-row items-center 
-      justify-between mt-2 
-      py-6 px-10 text-xl f
-      ont-medium'>
+      
+      <div>
         <h3>Your Cart</h3>
         <span>Total: $ {total}</span>
     </div>
