@@ -12,6 +12,9 @@ import { Badge, Nav } from 'react-bootstrap'
 import Container from 'react-bootstrap/Container'
 import { StoreProvider } from './context-and-reducer/StoreContext'
 import CartView from './components/CartView'
+import SigninScreen from './components/SigninScreen'
+// import { createBrowserRouter } from 'react-router-dom'
+// import { Router } from 'react-router-dom'
 
 // import { useContext } from 'react'
 // import { useContext } from 'react'
@@ -24,7 +27,8 @@ import CartView from './components/CartView'
 
 function App() {
 
-    // trying to figure out how to get clicked items to show on cart nav
+    
+                // trying to figure out how to get clicked items to show on cart nav
   // const {state = useContext(StoreContext);
   // const {CartView} = state
 
@@ -35,35 +39,39 @@ function App() {
       <header>
         <Navbar bg="dark" variant='dark'>
           <Container>
-            {/* <LinkContainer to="/"> */}
             
             <Link to="/">FabsFlowers</Link>
             <Nav>
+              <Link to="/signin">Sign In</Link>
+              <br/>
             <Link to="/cart">
               Cart
               <span>
                 <Badge pill bg="info">{CartView.length}</Badge>
               </span>
               </Link>
-</Nav>
-            {/* </LinkContainer> */}
+            </Nav>
+            
             
           </Container>
         </Navbar>
-        {/* you want to change from a href to link stop page refresh */}
-       {/* we are removing this one below bc we are using bootstrap */}
-        {/*  */}
-
+      
         {/* <Navbar.Brand>FabsFlowers</Navbar.Brand> */}
        </header>  
           <main>
 
             {/* add routing here */}
             <Container className='mt-3'>
+              
+              
                   <Routes>
+              
                   <Route path="/product/:slug" element={<ProductView />}></Route>
                   <Route path="/" element={<HomeView />}></Route>
-                  <Route path="/cart" element={<CartView/>}></Route>
+                  <Route path="/cart" element={<CartView />}></Route>
+                  <Route path="/signin" element={<SigninScreen />}></Route>
+            
+
                 </Routes>
           </Container>
       </main>

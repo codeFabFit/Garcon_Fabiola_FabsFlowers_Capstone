@@ -91,3 +91,7 @@ main {
   height: 250px;
   
 }
+
+.small-container{
+  max-width: 600px;
+}

@@ -55,6 +55,7 @@ export const StoreProvider = ({children}) => {
         })
     }
 
+   
 
     const value = {
         total: state.total,

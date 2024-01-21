@@ -2,7 +2,7 @@
 // view specific product based on its slug or what the user clicked
 
 // import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useContext, useEffect, useState } from 'react'
 import { useReducer } from 'react'
 import axios from 'axios'
@@ -33,6 +33,7 @@ const reducer = (state, action) => {
 
 function ProductView() {
 
+    const navigate = useNavigate()
     const params = useParams();
     const {slug} = params;
 

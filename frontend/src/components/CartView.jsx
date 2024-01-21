@@ -1,6 +1,6 @@
 // import React from 'react'
 import { useContext } from 'react'
-import { CardBody } from 'react-bootstrap';
+import { Button, CardBody } from 'react-bootstrap';
 // import { Navbar } from 'react-bootstrap';
 // import { CardBody} from 'react-bootstrap'
 import Product from './CartProduct'
@@ -8,12 +8,20 @@ import { StoreContext } from '../context-and-reducer/StoreContext'
 // import CartProduct from './CartProduct'
 // import Col from 'react-bootstrap/Col'
 // import CartProduct from './CartProduct'
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 const CartView = () => {
+
+
+    const navigate = useNavigate()
     const {products, total} = useContext(StoreContext);
+
+    const checkoutHandler = () => {
+      navigate('/signin?redirect=/shipping')
+  }
   return (
      <div>
       
@@ -26,6 +34,12 @@ const CartView = () => {
           <span>Thanks For Shopping With Us</span>
         <h3>Your Cart</h3>
         <span>Total: $ {total}</span>
+        <br/>
+        <Button
+        type="button"
+        variant='primary'
+        onClick={checkoutHandler}
+        >Proceed to Checkout</Button>
     
 {/* map through the products */}
               {Array.isArray(products) && products.map((products, index)=> 
