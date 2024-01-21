@@ -62,7 +62,13 @@ const [selectedImage, setSelectedImage] = useState('')
     }, [slug]);
   
 
+// handle addto cart
 
+const handleAddToCart = (e) => {
+  e.preventDefault();
+  console.log(product)
+  
+}
 
   return loading ? (
     <LoadingBox />
@@ -122,6 +128,7 @@ const [selectedImage, setSelectedImage] = useState('')
                             <Button 
                             name='add to cart'
                             variant='primary'
+                            onClick={handleAddToCart}
                             >
                               Add to Cart
                             </Button>
