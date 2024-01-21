@@ -12,6 +12,7 @@ import { Badge, Nav } from 'react-bootstrap'
 import Container from 'react-bootstrap/Container'
 import { StoreProvider } from './context-and-reducer/StoreContext'
 import CartView from './components/CartView'
+
 // import { useContext } from 'react'
 // import { useContext } from 'react'
 // import { Store } from './Store'
@@ -22,6 +23,10 @@ import CartView from './components/CartView'
 
 
 function App() {
+
+    // trying to figure out how to get clicked items to show on cart nav
+  // const {state = useContext(StoreContext);
+  // const {CartView} = state
 
   return (
     <StoreProvider>
@@ -37,7 +42,7 @@ function App() {
             <Link to="/cart">
               Cart
               <span>
-                <Badge pill bg="danger">{CartView.length}</Badge>
+                <Badge pill bg="info">{CartView.length}</Badge>
               </span>
               </Link>
 </Nav>

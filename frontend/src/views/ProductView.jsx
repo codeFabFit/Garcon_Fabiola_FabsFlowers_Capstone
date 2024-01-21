@@ -3,7 +3,7 @@
 
 // import React from 'react'
 import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useReducer } from 'react'
 import axios from 'axios'
 import Row from "react-bootstrap/Row"
@@ -14,6 +14,7 @@ import { Card } from 'react-bootstrap'
 import {Button} from 'react-bootstrap'
 import LoadingBox from '../components/LoadingBox'
 import MessageBox from '../components/MessageBox'
+import { StoreContext, StoreProvider } from '../context-and-reducer/StoreContext'
 // import Product from '../components/Product'
 
 
@@ -61,10 +62,19 @@ const [selectedImage, setSelectedImage] = useState('')
       fetchData();
     }, [slug]);
   
-
+const {state} = useContext(StoreContext)
+const {CartView} = state;
 // handle addto cart
 
-const handleAdd = (e) => {
+const handleAdd = async (e) => {
+  // making so that if i add a product back end is making sure it exisit
+  const existItem = CartView.product.find((x) => x._id === product._id)
+  const quantity = existItem ? existItem.quantity + 1 : 1;
+  const {data} = await axios.get(`http://localhost:5000/api/products/${product._id}`);
+  if (data.countInStock < quantity) {
+    window.alert("Wah, Boo Hoo! Product is out of Stock");
+    return;
+  }
   e.preventDefault();
   console.log(product)
   
