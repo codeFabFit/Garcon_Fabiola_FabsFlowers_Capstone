@@ -32,7 +32,11 @@ app.use('/api/seed', seedRouter)
 app.use('/api/products', productRouter)
 
 
-// path 
+// handle error handler
+
+app.use((err, req, res, next) => {
+    res.status(500).send({message: err.message});
+});
 
 
 // getting data from back end using specific slug of product to show data
