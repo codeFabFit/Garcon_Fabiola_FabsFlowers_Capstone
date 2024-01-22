@@ -69,7 +69,7 @@ const {CartView} = state;
 
 const handleAdd = async (e) => {
   // making so that if i add a product back end is making sure it exisit
-  const existItem = CartView.product.find((x) => x._id === product._id)
+  const existItem = CartView.product.find((x) => x._id === product._id);
   const quantity = existItem ? existItem.quantity + 1 : 1;
   const {data} = await axios.get(`http://localhost:5000/api/products/${product._id}`);
   if (data.countInStock < quantity) {
@@ -80,6 +80,7 @@ const handleAdd = async (e) => {
   console.log(product)
   
 }
+
 
   return loading ? (
     <LoadingBox />

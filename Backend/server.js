@@ -18,6 +18,10 @@ const app = express();
 // }
 app.use(cors())
 
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
+
+
 // connecting mongoose with mongodb 
 dotenv.config();
 
@@ -29,6 +33,9 @@ mongoose
 .catch((err) => {
     console.log(err.message)
 })
+
+
+
 app.use('/api/seed', seedRouter)
 app.use('/api/products', productRouter)
 app.use('/api/users', userRouter)
