@@ -5,6 +5,7 @@ import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 import seedRouter from './Routes/seedRoutes.js';
 import productRouter from './Routes/productRoutes.js';
+import userRouter from './Routes/userRoutes.js';
 
 
 
@@ -30,6 +31,8 @@ mongoose
 })
 app.use('/api/seed', seedRouter)
 app.use('/api/products', productRouter)
+app.use('/api/users', userRouter)
+
 
 
 // handle error handler

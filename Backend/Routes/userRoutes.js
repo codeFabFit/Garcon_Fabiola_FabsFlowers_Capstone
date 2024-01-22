@@ -1,8 +1,9 @@
 import express from 'express';
-import User from '../Models/userModel';
-import bcrypt from 'bcrypt.js'
+import User from '../Models/userModel.js';
+import bcrypt from 'bcryptjs'
+import expressAsyncHandler from 'express-async-handler';
 
-const useRouter = express.Router();
+const userRouter = express.Router();
 
 userRouter.post(
     '/signin', 
@@ -16,9 +17,11 @@ userRouter.post(
                         name: user.name,
                         email: user.email,
                         isAdmin: user.isAdmin,
+                        token: generateToken(user)
                     })
-            }
+            } return ;
         }
-        res.status(401).send({message: "invalid emaild and or password"})
-    })
-)
+        res.status(401).send({message: "invalid email and or password"})
+    }));
+
+export default userRouter;
