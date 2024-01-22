@@ -4,6 +4,7 @@ import { initialState } from './reducer';
 // import { propTypes } from 'react-bootstrap/esm/Image';
 
 export const StoreContext = createContext();
+// const userInfo = state;
 
 // eslint-disable-next-line react/prop-types
 export const StoreProvider = ({children}) => {
@@ -13,12 +14,6 @@ export const StoreProvider = ({children}) => {
     const [state, dispatch] = useReducer(reducer, initialState)
 
     
-
-    // const initialState = {
-    //     products:[],
-    //     total: 0,
-    // }
-
     const addToCart = (product) => {
         const updatedCart = state.products;
         updatedCart.push(product);

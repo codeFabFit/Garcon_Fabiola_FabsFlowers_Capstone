@@ -4,6 +4,7 @@ export const initialState = {
     products: []
 }
 
+
 const storeReducer = (state, action) => {
     switch (action.type) {
         case "add": {
@@ -19,6 +20,11 @@ const storeReducer = (state, action) => {
     
             return {...state, CartView:{...state.CartView, cartItems} }
     }        
+        case 'USER_SIGNIN':
+            return {
+                ...state, 
+                userInfo: action.payload
+            }
 
         case "remove":
             return {

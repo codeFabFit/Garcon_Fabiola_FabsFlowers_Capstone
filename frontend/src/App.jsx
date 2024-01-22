@@ -1,14 +1,9 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
 
-// import data from "./data"
 import {BrowserRouter, Route, Link, Routes} from 'react-router-dom'
 import HomeView from "./views/HomeView"
 import ProductView from './views/ProductView'
 import Navbar from 'react-bootstrap/Navbar'
-import { Badge, Button, Nav } from 'react-bootstrap'
+import { Badge, Button, Nav,} from 'react-bootstrap'
 import Toast from 'react-bootstrap/Toast' 
 import Container from 'react-bootstrap/Container'
 import { StoreProvider } from './context-and-reducer/StoreContext'
@@ -18,22 +13,13 @@ import { useState, useEffect } from 'react'
 import SearchBox from './components/SearchBox'
 import axios from 'axios'
 
-// import { createBrowserRouter } from 'react-router-dom'
-// import { Router } from 'react-router-dom'
-
-// import { useContext } from 'react'
-// import { useContext } from 'react'
-// import { Store } from './Store'
-
-// import {LinkContainer} from 'react-router-bootstrap'
-// removed because it wasnt rendering products 
-
-
 
 function App() {
 
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
   const [categories, setCategories] = useState([])
+    // const userInfo = state;
+
 
   useEffect (() => {
     const fetchCategories = async () => {
@@ -59,23 +45,27 @@ fetchCategories()
       <header>
         <Navbar bg="dark" variant='dark' expand='lg'>
           <Container>
+            
             <Button
             variant="dark"
             onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
             >
               <i className='fas fa-bars'></i>
             </Button>
-            <Link to="/">FabsFlowers</Link>
+            <Link to="/">
+
+              <Navbar.Brand>Fabs Flowers</Navbar.Brand>
+            </Link>
             <Navbar.Toggle aria-controls='basic-navbar-nav'/>
             {/* <Navbar.Collapse id='me-auto w-100 justify-content-end'></Navbar.Collapse> */}
-            <Nav>
             {/* <Link to="/aboutus">About Us</Link> */}
-
-              <Link to="/signin">Sign In</Link>
-              
-<SearchBox />
+            <Nav className='me-auto'>
+           
+              <Link to="/signin" className='nav-link'>Sign In</Link>
+              <Link className="nav-link" to="/signin" />
+                  <SearchBox />
               <br/>
-            <Link to="/cart">
+            <Link to="/cart" className='nav-link'>
               Cart
               <span>
                 <Badge pill bg="info">{CartView.length}</Badge>
