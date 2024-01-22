@@ -11,6 +11,10 @@ import productRouter from './Routes/productRoutes.js';
 
 
 const app = express();
+// const corsOption = {
+//     origin: 'http://localhost:5000', 
+//     optionsSuccessStatus: 200
+// }
 app.use(cors())
 
 // connecting mongoose with mongodb 

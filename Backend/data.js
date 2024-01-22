@@ -2,8 +2,24 @@
 
 // start with making consta data as an options and products as array
 // image dimentions are 679x829
+import bcrypt from 'bcryptjs';
+
 
 const data = {
+    users : [ {
+        name: "Fabiola",
+        email: "admin@fabsflowers.com",
+        password: bcrypt.hashSync('123456'),
+        isAdmin: true,
+    },
+    {
+        name: "Craig",
+        email: "craig@example.com",
+        password: bcrypt.hashSync('123456'),
+        isAdmin: false,
+    },
+
+    ],
     products: [
         // each product is an object
         {
