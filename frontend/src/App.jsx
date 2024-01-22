@@ -101,7 +101,7 @@ fetchCategories()
                 <Nav.Item>
                   <strong>Categories</strong>
                 </Nav.Item>
-              {categories.map((category) =>
+              {Array.isArray(categories) && categories.map((category) =>
               <Nav.Item key={category}>
                 <Link to ={`/search?category=${category}`}
                 onClick={() => setSidebarIsOpen(false)}>
