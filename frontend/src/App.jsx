@@ -42,7 +42,11 @@ function App() {
             
             <Link to="/">FabsFlowers</Link>
             <Nav>
+            {/* <Link to="/aboutus">About Us</Link> */}
+
               <Link to="/signin">Sign In</Link>
+              
+
               <br/>
             <Link to="/cart">
               Cart

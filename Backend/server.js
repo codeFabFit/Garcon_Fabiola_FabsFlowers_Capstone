@@ -6,6 +6,13 @@ import dotenv from 'dotenv'
 import seedRouter from './Routes/seedRoutes.js';
 import productRouter from './Routes/productRoutes.js';
 
+
+
+
+
+const app = express();
+app.use(cors())
+
 // connecting mongoose with mongodb 
 dotenv.config();
 
@@ -17,11 +24,9 @@ mongoose
 .catch((err) => {
     console.log(err.message)
 })
-
-const app = express();
 app.use('/api/seed', seedRouter)
 app.use('/api/products', productRouter)
-app.use(cors())
+
 
 // path 
 
