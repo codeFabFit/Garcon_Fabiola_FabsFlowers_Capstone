@@ -95,3 +95,25 @@ main {
 .small-container{
   max-width: 600px;
 }
+
+/* side bar */
+.sidebar-nav{
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  left: -300px;
+  background-color: #08080a;
+  transition: 0.5s
+}
+
+.active-cont{
+  margin-left: 240px;
+}
+
+.site-container{
+  transition: 0.3s;
+}
+
+.active-nav{
+  left: 0;
+}
