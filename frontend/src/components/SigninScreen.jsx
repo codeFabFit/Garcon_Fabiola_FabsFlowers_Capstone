@@ -25,6 +25,7 @@ export function SigninScreen() {
   };
 
   const submitHandler = async (e) => {
+    console.log(formData)
     e.preventDefault();
 
     try {
@@ -51,7 +52,6 @@ export function SigninScreen() {
   return (
     <Container className="small-container">
 
-<img className="logo-img" src="https://static.vecteezy.com/system/resources/previews/008/420/922/original/flower-alphabet-f-logo-vector.jpg"></img>
 
       <h1 className="mb-3">Sign Into Your Account</h1>
       <Form onSubmit={submitHandler}>
@@ -91,6 +91,9 @@ export function SigninScreen() {
         <Link to={`/signup?redirect=${redirect}`}>Create Your Account</Link>
       </div>
       <div className="mt-3">
+
+      <img className="logo-img" src="https://static.vecteezy.com/system/resources/previews/008/420/922/original/flower-alphabet-f-logo-vector.jpg"></img>
+      
         <span>Follow Us on Social Media</span>{' '}
         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>{' '}
         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>

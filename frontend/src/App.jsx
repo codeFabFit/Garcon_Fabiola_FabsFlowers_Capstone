@@ -3,7 +3,7 @@ import {BrowserRouter, Route, Link, Routes} from 'react-router-dom'
 import HomeView from "./views/HomeView"
 import ProductView from './views/ProductView'
 import Navbar from 'react-bootstrap/Navbar'
-import { Badge, Button, Nav,} from 'react-bootstrap'
+import { Badge,  Nav,} from 'react-bootstrap'
 import Toast from 'react-bootstrap/Toast' 
 import Container from 'react-bootstrap/Container'
 import { StoreProvider } from './context-and-reducer/StoreContext'
@@ -12,11 +12,12 @@ import SigninScreen from './components/SigninScreen'
 import { useState, useEffect } from 'react'
 import SearchBox from './components/SearchBox'
 import axios from 'axios'
+import AboutUs  from './components/AboutUs'
 
 
 function App() {
 
-  const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
+  // const [sideMenuIsOpen, setMenuIsOpen] = useState(false)
   const [categories, setCategories] = useState([])
     // const userInfo = state;
 
@@ -31,35 +32,24 @@ function App() {
       }
     }
 fetchCategories()
-  }, [])
+  }, [categories])
 
   return (
     <StoreProvider>
     <BrowserRouter>
-    <div className={
-      sidebarIsOpen 
-      ? 'd-inline-flex flex-column site-container active-cont'
-      : 'd-inline-flex flex-column site-container'
-      }
-      >
+    {/* makingfirst div conditional */}
+    <div>
       <header>
         <Navbar bg="dark" variant='dark' expand='lg'>
           <Container>
-            
-            <Button
-            variant="dark"
-            onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
-            >
-              <i className='fas fa-bars'></i>
-            </Button>
             <Link to="/">
-
               <Navbar.Brand>Fabs Flowers</Navbar.Brand>
             </Link>
-            <Navbar.Toggle aria-controls='basic-navbar-nav'/>
+            {/* <Navbar.Toggle aria-controls='basic-navbar-nav'/> */}
             {/* <Navbar.Collapse id='me-auto w-100 justify-content-end'></Navbar.Collapse> */}
             {/* <Link to="/aboutus">About Us</Link> */}
             <Nav className='me-auto'>
+            <Link to="/aboutus" className='nav-link'>About Us</Link>
            
               <Link to="/signin" className='nav-link'>Sign In</Link>
               <Link className="nav-link" to="/signin" />
@@ -68,7 +58,7 @@ fetchCategories()
             <Link to="/cart" className='nav-link'>
               Cart
               <span>
-                <Badge pill bg="info">{CartView.length}</Badge>
+                <Badge pill bg="info">{ProductView.length}</Badge>
               </span>
               </Link>
             </Nav>
@@ -80,26 +70,34 @@ fetchCategories()
         {/* <Navbar.Brand>FabsFlowers</Navbar.Brand> */}
        </header>  
 
-       <div
+       {/* <div
        className={
-        sidebarIsOpen 
+        sideMenuIsOpen 
         ? 'active-nav side-navbar d-flex justify-content-between flex-wrap flex-column'
         : 'side-navbar d-flex justify-content-between flex-wrap flex-column'
        }
        >
-            <Nav className="flex-column text-white w-100 p-2">
+            <Nav className="flex-column text-blue w-100 p-2">
+               <Navbar.Toggle aria-controls='basic-navbar-nav'/>
+              <Button
+             
+            variant="dark"
+            onClick={() => setMenuIsOpen(!sideMenuIsOpen)}
+            >More
+              <i className='fas fa-bars'></i>
+            </Button>
                 <Nav.Item>
-                  <strong>Categories</strong>
+
                 </Nav.Item>
               {Array.isArray(categories) && categories.map((category) =>
               <Nav.Item key={category}>
                 <Link to ={`/search?category=${category}`}
-                onClick={() => setSidebarIsOpen(false)}>
+                onClick={() => setMenuIsOpen(false)}>
                   <Nav.Link>{category}</Nav.Link>
                 </Link>
               </Nav.Item>)}
             </Nav>
-       </div>
+       </div> */}
           <main>
 
             {/* add routing here */}
@@ -112,6 +110,8 @@ fetchCategories()
                   <Route path="/" element={<HomeView />}></Route>
                   <Route path="/cart" element={<CartView />}></Route>
                   <Route path="/signin" element={<SigninScreen />}></Route>
+                  <Route path="/aboutus" element={<AboutUs />}></Route>
+
             
 
                 </Routes>

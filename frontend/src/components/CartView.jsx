@@ -31,6 +31,9 @@ const CartView = () => {
       py-6 px-10 text-xl f
       ont-medium'>
         <CardBody>
+
+<img className="logo-img" src="https://static.vecteezy.com/system/resources/previews/008/420/922/original/flower-alphabet-f-logo-vector.jpg"></img>
+
           <span>Thanks For Shopping With Us</span>
         <h3>Your Cart</h3>
         <span>Total: $ {total}</span>
