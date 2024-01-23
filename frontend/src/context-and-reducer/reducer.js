@@ -1,7 +1,8 @@
 export const initialState = {
 
     total: 0,
-    products: []
+    products: [],
+    userInfo: "",
 }
 
 
@@ -20,11 +21,7 @@ const storeReducer = (state, action) => {
     
             return {...state, CartView:{...state.CartView, cartItems} }
     }        
-        case 'USER_SIGNIN':
-            return {
-                ...state, 
-                userInfo: action.payload
-            }
+       
 
         case "remove":
             return {
@@ -36,7 +33,14 @@ const storeReducer = (state, action) => {
                 ...state,
                 total: action.payload    
         } 
-        default: throw Error("cannot match")
+
+ case 'USER_SIGNIN':
+            return {
+                ...state, 
+                userInfo: action.payload
+            }
+
+        default: throw Error("cannot match action type")
     }
 }
 

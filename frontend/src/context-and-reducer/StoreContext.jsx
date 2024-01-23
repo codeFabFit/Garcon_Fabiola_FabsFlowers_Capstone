@@ -50,13 +50,27 @@ export const StoreProvider = ({children}) => {
         })
     }
 
-   
+   const userSignIn = (userInfo) => {
+    dispatch({
+        type: "USER_SIGNIN",
+        payload: userInfo,
+    })
+   }
+
+   const userSignOut = () => {
+    dispatch({
+        type: "USER_SIGNOUT",
+    })
+   }
 
     const value = {
         total: state.total,
         products: state.products,
         addToCart,
         removeFromCart,
+        updatePrice,
+        userSignIn,
+        userSignOut,
     }
 
 
