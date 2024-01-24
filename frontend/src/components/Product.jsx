@@ -19,7 +19,7 @@ function Product ({product}) {
     }
 
     return (
-        // <StoreProvider>
+
         <Card className="product">
             <Link to={`/product/${product.slug}`}>
                 <img src={product.image} className="card-img-top" alt={product.name}/>
@@ -35,7 +35,7 @@ function Product ({product}) {
                 </Card.Text>
                 </Card.Body>  
         </Card>
-        // {/* </StoreProvider> */}
+
     )
 
 }

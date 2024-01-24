@@ -1,22 +1,20 @@
-/* eslint-disable no-unused-vars */
+// /* eslint-disable no-unused-vars */
 // view specific product based on its slug or what the user clicked
 
 // import React from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
-import { useContext, useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import {  useEffect,} from 'react'
 import { useReducer } from 'react'
 import axios from 'axios'
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-import { Badge, ListGroup, ListGroupItem } from 'react-bootstrap'
+import { Badge, ListGroup } from 'react-bootstrap'
 // import CardBody from 'react-bootstrap'
 import { Card } from 'react-bootstrap'
 import {Button} from 'react-bootstrap'
 import LoadingBox from '../components/LoadingBox'
 import MessageBox from '../components/MessageBox'
-import StoreContext from '../context-and-reducer/StoreContext'
-// import { StoreProvider } from '../context-and-reducer/StoreContext'
-// import Product from '../components/Product'
+
 
 
 const reducer = (state, action) => {
@@ -34,11 +32,11 @@ const reducer = (state, action) => {
 
 function ProductView() {
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
     const params = useParams();
     const {slug} = params;
 
-const [selectedImage, setSelectedImage] = useState('')
+
 
     const [{loading, error, product}, dispatch] = useReducer(reducer, {
       product: [],
@@ -63,10 +61,7 @@ const [selectedImage, setSelectedImage] = useState('')
       };
       fetchData();
     }, [slug]);
-  
-// const {state} = useContext(StoreContext)
-// const {product} = state;
-// handle addto cart
+
 
 const handleAddToCart = async (e) => {
 

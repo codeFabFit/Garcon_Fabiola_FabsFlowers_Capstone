@@ -1,14 +1,7 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/jsx-key */
-// this is the home screen view
 
-// import React from 'react'
 import { useEffect, useReducer} from "react";
 import logger from 'use-reducer-logger'
-// import { Link } from "react-router-dom";
-// import data from "../data";
-// once you have added setProducts from useState
-// you can remove the imported data cause its reading from back end
+
 import axios from "axios";
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
@@ -41,8 +34,7 @@ function HomeView() {
     loading: true,
     error: '',
   })
-  // const [products, setProducts] = useState([]);
-  // using usestate
+
 
   // useEffect
   useEffect(() => {

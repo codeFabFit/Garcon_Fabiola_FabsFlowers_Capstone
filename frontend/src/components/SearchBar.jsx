@@ -11,12 +11,15 @@ const SearchBar = ({ onCommentSubmit }) => {
 
   const handleSubmit = () => {
     if (comment.trim() !== '') {
+      alert("Thank you for your submission! Our Team is right on it.")
         if(typeof onCommentSubmit === 'function')
       onCommentSubmit(comment);
+      
       else {
         console.error('onCommentSubmit is not a function')
       }
       setComment('');
+
     }
 
   };
@@ -28,7 +31,7 @@ const SearchBar = ({ onCommentSubmit }) => {
     <h1>Flower Search</h1>
     <p>We know that searching for your perfect flower is important, and here at FabsFlowers we want to ensure our customers get the best of the best!</p>
     <p>We want to know what flowers you love best and want to see at   <code>Fabs Flowers</code></p>
-    <p> <em>list your favroite flowers below</em> </p>
+    <p> <em> <strong>list your fab-orite flowers below</strong> </em></p>
     <div className="comment-input-container">
       <textarea
         className="rounded-input"
@@ -55,7 +58,7 @@ export default SearchBar;
 
 
 
-
+// was having alot of trouble remember where my redirect route is coming from to be able to create this page
 
 // // import React from 'react'
 // // import { ErrorResponseImpl } from '@remix-run/router/dist/utils';

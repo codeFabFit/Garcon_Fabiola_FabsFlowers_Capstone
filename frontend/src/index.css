@@ -1,10 +1,6 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Roboto:wght@300&family=Rubik&display=swap');
-/* :root{
-  --background: #f2eee3 ;
-  --check: #000 ;
-  --ball: #f2eee3 ;
-} */
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -16,14 +12,12 @@ a:hover {
 
 body {
   margin: 0;
-  /* display: flex; */
   place-items: center;
   background-color: #f2eee3 ;
   align-items: center;
   height:100%;
-  /* font-family: ; */
-  /* min-width: 320px; */
-  /* min-height: 100vh; */
+  /* font-family:  ; */
+ 
 }
 
 h1 {
@@ -202,8 +196,8 @@ main {
   background-color: #3498db; 
   color: #fff;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Box shadow */
-  transition: background-color 0.3s ease; /* Transition for hover effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s ease; 
 }
  /* signup screen form */
 
@@ -232,53 +226,6 @@ main {
   background-color: darkgoldenrod;
 }
 
-/* dark mode  did not work properly */ 
-/* .dark{
-  --background: #000;
-  --check: #ffeee3;
-  --ball:#000;
-}
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-.dark-mode{
-  display: flex;
-  width: 10%;
-  height: 10vh;
-  justify-content: center;
-  align-items: center;
-  background: var(--background);
-  transition: .5s;
-}
 
-.checkbox:checked+.label .ball{
-  transform: translateX(24px);
-}
-
-.checkbox{
-  opacity: 0;
-  position: absolute;
-}
-
-.label {
-  width: 50px;
-  height: 26px;
-  background: var(--check);
-  border-radius: 50px;
-  position: relative;
-}
-
-.ball{
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 22x;
-  height: 22px;
-  background-color: var(--ball);
-  border-radius: 50%;
-  transition: transform 0.2s linear;
-} */

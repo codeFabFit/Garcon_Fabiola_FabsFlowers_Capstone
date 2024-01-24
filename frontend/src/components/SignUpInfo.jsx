@@ -32,8 +32,7 @@ const [formData, setFormData] = useState({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform any necessary validation and submission logic here
-    // For simplicity, just redirecting to CartView
+ 
     history.push('/cart-view');
   };
 

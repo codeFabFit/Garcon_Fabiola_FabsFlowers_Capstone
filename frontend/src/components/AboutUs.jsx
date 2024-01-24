@@ -43,7 +43,7 @@ const AboutUs = () => {
          <hr/>
          <code> <h6>Flower Care</h6> </code>
 
-          <p>Learn essential tips and techniques for ensuring the longevity and vitality of your beautiful flowers. Check out tips to care for your flowers to last longer.
+          <p>Learn essential tips and techniques for ensuring the longevity and vitality of your beautiful flowers. Check out tips to care for your flowers to last longer. </p>
                    <li> For the flowers to last longer, place them in a vase.</li>
                    <li>Put a little water in the vase.</li>
                    <li>Avoid very stuffy places for the flowers to last longer.</li>
@@ -51,8 +51,9 @@ const AboutUs = () => {
                    <li>Change the water frequently.</li>
                    <li>Avoid direct exposure to the sun.</li>
 
-                   </p>
+                   
         </div>
+        <br/>
 <p>Want to know how to care for any flower type? click the button below </p>
         <Button variant="primary" onClick={handleLearnMoreClick}>
           Learn More

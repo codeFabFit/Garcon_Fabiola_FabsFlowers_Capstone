@@ -1,15 +1,12 @@
 // import React from 'react'
 import { useContext } from 'react'
 import { Button, CardBody } from 'react-bootstrap';
-// import { Navbar } from 'react-bootstrap';
-// import { CardBody} from 'react-bootstrap'
-// import Product from './CartProduct'
+
 import StoreContext from '../context-and-reducer/StoreContext'
 import CartProduct from './CartProduct'
-// import Col from 'react-bootstrap/Col'
-// import CartProduct from './CartProduct'
+
 import { useNavigate } from 'react-router-dom';
-// import Navigation from './Navigation';
+
 
 
 

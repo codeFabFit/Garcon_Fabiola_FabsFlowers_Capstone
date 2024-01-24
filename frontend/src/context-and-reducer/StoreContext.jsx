@@ -2,22 +2,12 @@ import {createContext, useReducer} from 'react'
 import { initialState } from './reducer';
 import reducer from './reducer'
 import { propTypes } from 'react-bootstrap/esm/Image';
-// import CartProduct from '../components/CartProduct';
-
-
-// import { propTypes } from 'react-bootstrap/esm/Image';
-// import { PropTypes } from "prop-types";
 
 
 const StoreContext = createContext();
-
  
 
 export default StoreContext;
-
-
-// const userInfo = state;
-
 
  
 export const StoreProvider = ({children})=>{
