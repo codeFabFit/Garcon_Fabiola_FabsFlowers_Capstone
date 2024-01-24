@@ -6,17 +6,16 @@ import { Link } from "react-router-dom";
 import  StoreContext from "../context-and-reducer/StoreContext";
 // import { StoreProvider } from "../context-and-reducer/StoreContext";
 
-function Product(props) {
-    const {product} = props
+function Product ({product}) {
     const {addToCart} = useContext(StoreContext);
 
 
 
     // addtocart is not a function error in console
-    const handleAddToCart = (e) => {
-        e.preventDefault();
+    const handleAddToCart = () => {
+        // e.preventDefault();
         console.log(product)
-        addToCart;
+       {addToCart}
     }
 
     return (
