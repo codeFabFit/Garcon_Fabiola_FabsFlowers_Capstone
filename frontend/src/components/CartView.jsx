@@ -58,6 +58,9 @@ const CartView = () => {
 
                
 </div>
+
+
+
                 
    )}
 

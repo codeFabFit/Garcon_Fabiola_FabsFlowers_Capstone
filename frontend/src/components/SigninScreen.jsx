@@ -41,7 +41,7 @@ export function SigninScreen() {
       navigate(formData.redirect || '/');
       console.log(data);
     } catch (err) {
-      alert("Invalid Email or Password. Try again.");
+      alert("Mistake with Email or Password. Please Try again.");
     }
   };
 
@@ -90,10 +90,12 @@ export function SigninScreen() {
         New Customer?{' '}
         <Link to={`/signup?redirect=${redirect}`}>Create Your Account</Link>
       </div>
+
+      
       <div className="mt-3">
 
       <img className="logo-img" src="https://static.vecteezy.com/system/resources/previews/008/420/922/original/flower-alphabet-f-logo-vector.jpg"></img>
-      
+
         <span>Follow Us on Social Media</span>{' '}
         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>{' '}
         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
