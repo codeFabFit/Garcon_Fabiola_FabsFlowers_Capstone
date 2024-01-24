@@ -14,7 +14,8 @@ import { Card } from 'react-bootstrap'
 import {Button} from 'react-bootstrap'
 import LoadingBox from '../components/LoadingBox'
 import MessageBox from '../components/MessageBox'
-import { StoreContext, StoreProvider } from '../context-and-reducer/StoreContext'
+import StoreContext from '../context-and-reducer/StoreContext'
+// import { StoreProvider } from '../context-and-reducer/StoreContext'
 // import Product from '../components/Product'
 
 

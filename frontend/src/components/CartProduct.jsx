@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { StoreContext } from "../context-and-reducer/StoreContext";
+import StoreContext from "../context-and-reducer/StoreContext";
 import { PropTypes } from "prop-types";
 
 

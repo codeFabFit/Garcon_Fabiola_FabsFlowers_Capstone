@@ -4,7 +4,7 @@ import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Container from 'react-bootstrap/Container';
-import { StoreContext } from "../context-and-reducer/StoreContext";
+import StoreContext from "../context-and-reducer/StoreContext";
 
 export function SigninScreen() {
   const navigate = useNavigate();

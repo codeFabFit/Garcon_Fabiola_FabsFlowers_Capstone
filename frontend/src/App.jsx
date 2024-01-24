@@ -17,11 +17,8 @@ import AboutUs  from './components/AboutUs'
 
 function App() {
 
-  // const [sideMenuIsOpen, setMenuIsOpen] = useState(false)
   const [categories, setCategories] = useState([])
-    // const userInfo = state;
-
-
+   
   useEffect (() => {
     const fetchCategories = async () => {
       try {
@@ -33,6 +30,8 @@ function App() {
     }
 fetchCategories()
   }, [categories])
+
+
 
   return (
     <StoreProvider>
@@ -62,7 +61,14 @@ fetchCategories()
               </span>
               </Link>
             </Nav>
-            
+            {/* creating a dark/light mode */}
+            {/* <div className="dark-mode">
+              <input type="checkbox" className="checkbox" id='checkbox'/>
+                
+              <label htmlFor="checkbox" className='label'>
+                <div className='ball'></div>
+              </label>
+            </div> */}
             
           </Container>
         </Navbar>

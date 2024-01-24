@@ -3,7 +3,8 @@
 import { useContext } from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { StoreContext, StoreProvider } from "../context-and-reducer/StoreContext";
+import  StoreContext from "../context-and-reducer/StoreContext";
+import { StoreProvider } from "../context-and-reducer/StoreContext";
 
 function Product(props) {
     const {product} = props
