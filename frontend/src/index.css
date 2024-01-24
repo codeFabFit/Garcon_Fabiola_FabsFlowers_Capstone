@@ -1,10 +1,10 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Roboto:wght@300&family=Rubik&display=swap');
-:root{
+/* :root{
   --background: #f2eee3 ;
   --check: #000 ;
   --ball: #f2eee3 ;
-}
+} */
 a {
   font-weight: 500;
   color: #646cff;
@@ -15,8 +15,8 @@ a:hover {
 }
 
 body {
-  /* margin: 0; */
-  display: flex;
+  margin: 0;
+  /* display: flex; */
   place-items: center;
   background-color: #f2eee3 ;
   align-items: center;
@@ -30,7 +30,10 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
+ p {
+  display: flex;
+  align-items: center;
+ }
 .site-container{
   min-height: 100vh;
 }
@@ -84,9 +87,8 @@ main {
 .logo-img{
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 250px;
-  
+  padding: 25px;
 }
 
 .small-container{
@@ -181,8 +183,8 @@ main {
 .notice{
   width: 345px;
 }
-/* dark mode */
-.dark{
+/* dark mode  did not work properly */ 
+/* .dark{
   --background: #000;
   --check: #ffeee3;
   --ball:#000;
@@ -230,4 +232,4 @@ main {
   background-color: var(--ball);
   border-radius: 50%;
   transition: transform 0.2s linear;
-}
+} */

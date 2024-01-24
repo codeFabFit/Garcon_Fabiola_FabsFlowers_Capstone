@@ -78,12 +78,12 @@ export default StoreContext;
 export const StoreProvider = ({children})=>{
     // right now its giving error but im going to do the eslint to stop the constant reminder
     // it works on the browser not sure why it keeps bothering me 
-
-    
-    const [state, dispatch] = useReducer(reducer, initialState)
 StoreProvider.propTypes = {
         children: propTypes.node,
     };
+    
+    const [state, dispatch] = useReducer(reducer, initialState)
+
     
     const addToCart = (product) => {
         const updatedCart = [
@@ -100,7 +100,7 @@ StoreProvider.propTypes = {
     }
 
     const removeFromCart = (product) => {
-        const updatedCart = state.products.concat((currentProduct) => currentProduct.name !== product.name);
+        const updatedCart = state.products.filter((currentProduct) => currentProduct.name !== product.name);
         
         updatePrice(updatedCart);
 
@@ -147,7 +147,7 @@ StoreProvider.propTypes = {
 
    
 
-    return <StoreContext.Provider value ={{state, value, dispatch}}>{children}</StoreContext.Provider>
+    return <StoreContext.Provider value ={{state, value}}>{children}</StoreContext.Provider>
 
     
 }
