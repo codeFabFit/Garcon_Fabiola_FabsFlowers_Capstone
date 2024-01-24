@@ -183,6 +183,55 @@ main {
 .notice{
   width: 345px;
 }
+
+/* search bar comment box */
+.comment-input-container {
+  text-align: center;
+}
+
+.rounded-input {
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.styled-button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #3498db; 
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Box shadow */
+  transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+ /* signup screen form */
+
+ .rounded-form {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.gold-border:focus {
+  border: 2px solid gold;
+  outline: none;
+}
+
+.rounded-button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: gold;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rounded-button:hover {
+  background-color: darkgoldenrod;
+}
+
 /* dark mode  did not work properly */ 
 /* .dark{
   --background: #000;

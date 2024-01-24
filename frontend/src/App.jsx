@@ -6,7 +6,7 @@ import ProductView from './views/ProductView'
 // import { Badge,  Nav,} from 'react-bootstrap'
 import Toast from 'react-bootstrap/Toast' 
 import Container from 'react-bootstrap/Container'
-import { StoreProvider } from './context-and-reducer/StoreContext'
+import {StoreProvider } from './context-and-reducer/StoreContext'
 import CartView from './components/CartView'
 import SigninScreen from './components/SigninScreen'
 import { useState, useEffect } from 'react'
@@ -14,6 +14,8 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import AboutUs  from './components/AboutUs'
 import Navigation from './components/Navigation'
+import SearchBar from './components/SearchBar'
+import SignUpInfo from './components/SignUpInfo'
 
 
 function App() {
@@ -36,37 +38,12 @@ fetchCategories()
 
   return (
     <StoreProvider>
-    <BrowserRouter>
+      <BrowserRouter>
   
     <div>
       <header>
         <Navigation />
-        {/* <Navbar bg="dark" variant='dark' expand='lg'>
-          <Container>
-            <Link to="/">
-              <Navbar.Brand>Fabs Flowers</Navbar.Brand>
-            </Link>
-
-            <Nav className='me-auto'>
-            <Link to="/aboutus" className='nav-link'>About Us</Link>
-           
-              <Link to="/signin" className='nav-link'>Sign In</Link>
-              <Link className="nav-link" to="/signin" />
-                  <SearchBox />
-              <br/>
-            <Link to="/cart" className='nav-link'>
-              Cart
-              <span>
-                <Badge pill bg="info">{ProductView.length}</Badge>
-              </span>
-              </Link>
-            </Nav>
-        
-            
-          </Container>
-        </Navbar> */}
       
-   
        </header>  
 
           <main>
@@ -80,8 +57,15 @@ fetchCategories()
                   <Route path="/product/:slug" element={<ProductView />}></Route>
                   <Route path="/" element={<HomeView />}></Route>
                   <Route path="/cart" element={<CartView />}></Route>
-                  <Route path="/signin" element={<SigninScreen />}></Route>
+                  <Route path="/signin" element={<SigninScreen />}></Route> 
+                  <Route path="/shipping" element={<SignUpInfo />}></Route>
                   <Route path="/aboutus" element={<AboutUs />}></Route>
+                  <Route path="/search" element={<SearchBar />}></Route>
+                 
+
+                  
+                  
+
 
             
 

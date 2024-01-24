@@ -10,6 +10,7 @@ productRouter.get('/', async (req, res) => {
     res.send(products);
 });
 
+
 productRouter.get(
     '/categories', 
     expressAsyncHandler(async (req, res) => {

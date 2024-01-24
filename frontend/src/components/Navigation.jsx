@@ -31,17 +31,17 @@ const Navigation = () => {
             <DropdownButton
         id="dropdown-button-dark-example2"
         variant="secondary"
-        title="Dark dropdown"
+        title="Support Us"
         className="mt-2"
         data-bs-theme="dark"
       >
-        <Dropdown.Item href="#/action-1" active>
-          Action
+        <Dropdown.Item href="/" active>
+          FabsFlowers
         </Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        <Dropdown.Item href="www.facebook.com/">Follow Social Media</Dropdown.Item>
+        <Dropdown.Item href="https://www.waitroseflorist.com/inspiration-and-advice/care-guides/caring-for-your-flowers">Flower Care</Dropdown.Item>
         <Dropdown.Divider />
-        <Dropdown.Item href="#/action-4">Separated link</Dropdown.Item>
+        <Dropdown.Item href="https://www.paypal.com/">Donate</Dropdown.Item>
       </DropdownButton>
             
           </Container>
