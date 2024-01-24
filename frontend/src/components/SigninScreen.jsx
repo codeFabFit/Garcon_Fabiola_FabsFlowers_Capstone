@@ -14,13 +14,13 @@ export function SigninScreen() {
     rememberMe: false,
   });
 
-  const { dispatch } = useContext(StoreContext);
+  const {dispatch}  = useContext(StoreContext);
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: type === 'checkbox' ? checked : value,
+      [name]: type === 'checkbox' ? checked ): value,
     }));
   };
 
@@ -29,7 +29,7 @@ export function SigninScreen() {
     e.preventDefault();
 
     try {
-      const { data } = await axios.post('http://localhost:5000/api/users/signin', {
+      const data  = await axios.post('http://localhost:5000/api/users/signin', {
         email: formData.email,
         password: formData.password,
       });

@@ -7,7 +7,7 @@ import  StoreContext from "../context-and-reducer/StoreContext";
 // import { StoreProvider } from "../context-and-reducer/StoreContext";
 
 function Product ({product}) {
-    const {addToCart} = useContext(StoreContext);
+    const addToCart = useContext(StoreContext);
 
 
 
