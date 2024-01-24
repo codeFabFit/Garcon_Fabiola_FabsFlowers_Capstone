@@ -64,22 +64,47 @@ const [selectedImage, setSelectedImage] = useState('')
       fetchData();
     }, [slug]);
   
-const {state} = useContext(StoreContext)
-const {CartView} = state;
+// const {state} = useContext(StoreContext)
+// const {product} = state;
 // handle addto cart
 
-const handleAdd = async (e) => {
+const handleAddToCart = async (e) => {
+
+  
+  if(!Array.isArray(product)){
+    console.log("product should be array")
+    console.log(product.name)
+    return
+  }
   // making so that if i add a product back end is making sure it exisit
-  const exisitItem = CartView.product.find((x) => x._id === product._id);
-  const quantity = exisitItem ? exisitItem.quantity + 1 : 1;
-  const {data} = await axios.get(`http://localhost:5000/api/products/${product._id}`);
-  if (data.countInStock < quantity) {
-    window.alert("Wah, Boo Hoo! Product is out of Stock");
+  const exisitingProduct = exisitingProduct.findIndex((x) => x.name === product.name);
+  if (!product) {
+    console.error("product not found in array")
+    
+    return
+  }
+  const quantity = product ? product.quantity + 1 : 1;
+    try{
+      const {data} = await 
+  axios.get(`http://localhost:5000/api/products/${product.name}`);
+    
+  
+  // checking if product is in stock
+  if (data.countInStock < 1) {
+    window.alert("Wah! Product is out of Stock");
     return;
   }
+  dispatch({
+    type: "ADD_TO_CART",
+    payload: {...product, quantity}
+
+  })
+} catch(error){
+  console.error("error fetching product details")
+
   e.preventDefault();
-  console.log(product)
-  
+ 
+ } 
 }
 
 
@@ -141,7 +166,8 @@ const handleAdd = async (e) => {
                             <Button 
                             name='add to cart'
                             variant='primary'
-                            onClick={handleAdd}
+                            onClick={()=> handleAddToCart(product)}
+                            
                             >
                               Add to Cart
                             </Button>

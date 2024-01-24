@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import  StoreContext from "../context-and-reducer/StoreContext";
-import { StoreProvider } from "../context-and-reducer/StoreContext";
+// import { StoreProvider } from "../context-and-reducer/StoreContext";
 
 function Product(props) {
     const {product} = props
@@ -20,7 +20,7 @@ function Product(props) {
     }
 
     return (
-        <StoreProvider>
+        // <StoreProvider>
         <Card className="product">
             <Link to={`/product/${product.slug}`}>
                 <img src={product.image} className="card-img-top" alt={product.name}/>
@@ -36,7 +36,7 @@ function Product(props) {
                 </Card.Text>
                 </Card.Body>  
         </Card>
-        </StoreProvider>
+        // {/* </StoreProvider> */}
     )
 
 }

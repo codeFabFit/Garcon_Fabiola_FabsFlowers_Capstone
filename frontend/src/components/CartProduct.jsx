@@ -7,7 +7,7 @@ const CartProduct = ({ product }) => {
 
 
   const {removeFromCart} = useContext(StoreContext)
-    const handleRemove = () => {
+    const handleRemoves = () => {
           removeFromCart(product);
           console.log(product)
     }
@@ -24,7 +24,7 @@ const CartProduct = ({ product }) => {
 </div>
 <div>
         <button className="bg-indigo-50 text-white text-lg font-medium rounded-full p-4" 
-        onClick={handleRemove}>remove</button>
+        onClick={handleRemoves}>remove</button>
 </div>
     </div>
   )
