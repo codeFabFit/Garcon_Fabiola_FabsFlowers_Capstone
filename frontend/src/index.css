@@ -72,17 +72,20 @@ main {
 }
 
 
-.img-large {
+/* .img-large {
   display: flex;
   justify-content: center;
   
-}
+} */
 
 .logo-img{
-  display: flex;
   align-items: center;
   height: 250px;
   padding: 25px;
+  border: double rgb(135, 117, 15);
+}
+.logo-img:hover{
+  border-radius: 24px;
 }
 
 .small-container{

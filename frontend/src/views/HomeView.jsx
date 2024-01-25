@@ -126,6 +126,19 @@ function HomeView() {
     </Container>
 
 
+        {/* <div className="subscribe">
+          <h2 className="subscribe-title">Lets Keep In Touch</h2>
+          <p className="subscribe-tagline">subscribe to keep in touch with fresh news and exciting updates. We promise we wont spam you!</p>
+          <div className="form">
+            <input type="email" className="email-form" placeholder="Enter your email address"></input>
+              <button className="form-button">Send</button>
+          </div>
+          <div className="notice">
+            <input type="checkbox" />
+              <span className="notice-copy">I agree to my email addres being stored and used to receive monthly newsletterson updates and exciting new about <code>Fabs Flowers </code></span>
+            
+          </div>
+        </div> */}
       </>
   ) 
   return <div>{products ? isLoaded : <div>loading ...</div>}</div>;

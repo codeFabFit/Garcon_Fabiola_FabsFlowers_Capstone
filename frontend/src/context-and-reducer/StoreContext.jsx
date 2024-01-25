@@ -1,12 +1,67 @@
-import {createContext, useReducer} from 'react'
+import {createContext, useReducer, reducer} from 'react'
 import { initialState } from './reducer';
-import reducer from './reducer'
 import { propTypes } from 'react-bootstrap/esm/Image';
 
 
 const StoreContext = createContext();
  
+// export const StoreProvider = ({children})=> {
+//     const [state, dispatch]= useReducer(reducer, initialState)
 
+//     const addToCart = (product) => {
+//         const updatedCart = state.products.concat(product)
+           
+//             updatePrice(updatedCart)
+//         dispatch({
+//             type: "ADD_TO_CART",
+//             payload:{
+//                 products: updatedCart
+//             }
+//         })
+//     }
+    
+//     const removeFromCart = (product) => {
+//       const updatedCart =  state.products.filter((currentProduct) => currentProduct.name !== product.name)
+//       updatePrice(updatedCart)
+//             console.log(removeFromCart.product)
+
+//       dispatch({
+//         type: "REMOVE_FROM_CART",
+//         payload:{
+//             products: updatedCart
+//         }
+
+//     })
+// const updatePrice = (products) => {
+//     let total =0;
+//     products.forEach((product) => (total += product.price));
+    
+//     dispatch({
+//         type: "UPDATE_PRICE",
+//         payload:{
+//             products: updatedCart
+//         }
+// })
+
+// }
+
+// const value = {
+//     total: state.total,
+//     products: state.products,
+//     addToCart,
+//     removeFromCart
+// }
+// return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>
+// }}
+
+// const CartProduct = () => {
+//     const context = useContext(StoreContext)
+
+//     if (context === undefined) {
+//         throw new Error("useShop must be used within ShopContext")
+//     }
+//     return context;
+// }
 export default StoreContext;
 
  
@@ -86,65 +141,3 @@ StoreProvider.propTypes = {
 
     
 }
-
-
-
-
-
-// export const StoreProvider = ({children})=> {
-//     const [state, dispatch]= useReducer(reducer, initialState)
-
-//     const addToCart = (product) => {
-//         const updatedCart = state.products.concat(product)
-           
-//             updatePrice(updatedCart)
-//         dispatch({
-//             type: "ADD_TO_CART",
-//             payload:{
-//                 products: updatedCart
-//             }
-//         })
-//     }
-    
-//     const removeFromCart = (product) => {
-//       const updatedCart =  state.products.filter((currentProduct) => currentProduct.name !== product.name)
-//       updatePrice(updatedCart)
-//             console.log(removeFromCart.product)
-
-//       dispatch({
-//         type: "REMOVE_FROM_CART",
-//         payload:{
-//             products: updatedCart
-//         }
-
-//     })
-// const updatePrice = (products) => {
-//     let total =0;
-//     products.forEach((product) => (total += product.price));
-    
-//     dispatch({
-//         type: "UPDATE_PRICE",
-//         payload:{
-//             products: updatedCart
-//         }
-// })
-
-// }
-
-// const value = {
-//     total: state.total,
-//     products: state.products,
-//     addToCart,
-//     removeFromCart
-// }
-// return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>
-// }}
-
-// const CartProduct = () => {
-//     const context = useContext(StoreContext)
-
-//     if (context === undefined) {
-//         throw new Error("useShop must be used within ShopContext")
-//     }
-//     return context;
-// }

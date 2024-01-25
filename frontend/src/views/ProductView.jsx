@@ -128,9 +128,6 @@ const handleAddToCart = async (e) => {
                 Price : $ {product.price}
               </ListGroup.Item>
 
-    
-
-
               <ListGroup.Item>
                 Description:
                 <p>{product.description}</p>
@@ -172,6 +169,21 @@ const handleAddToCart = async (e) => {
 
             </Card.Body>
           </Card>
+
+          <Card>
+          <Card.Text>
+                    <Col>At A Glance:</Col>
+                    <Col md={6}>
+          <ListGroup variant="flush">
+
+              <ListGroup.Item>
+                <h3>Reviews:</h3>
+                <h5>{product.numReviews}</h5>
+              </ListGroup.Item>
+          </ListGroup>
+        </Col>
+                </Card.Text>
+         </Card>       
         </Col>
       </Row>
     </div>

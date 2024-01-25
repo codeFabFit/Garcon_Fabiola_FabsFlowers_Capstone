@@ -7,24 +7,24 @@ const CartProduct = ({ product }) => {
 
 
   const {removeFromCart} = useContext(StoreContext)
-    const handlesRemove = () => {
-          {removeFromCart(product)}
-          console.log(`removed from cart: ${product}`)
+    const handleRemoves = () => {
+          removeFromCart(product);
+          console.log(product)
     }
 
   return (
-    <div className="mx-auto px-8 border-border-secondary ">
+    <div className="mx-auto px-8 border-gray-200 ">
       <img src={product.image} alt={product.name}
-      className="img-fluid-w-50"/>
-   <div className="d-flex fex-column align-items-start">
-      <div className="mx-auto px-8 border-border-secondary">
+      className="w-40"/>
+   <div className="flex flex-row item">
+      <div className="w-1/2 px-10">
         <p className="text-xl">{product.name}</p>
         <p className="text-lg">${product.price}</p>
         </div>
 </div>
 <div>
-        <button className="btn btn-info text-white btn-sm font-weight-medium rounded-circle p-4" 
-        onClick={handlesRemove}>remove</button>
+        <button className="bg-indigo-50 text-white text-lg font-medium rounded-full p-4" 
+        onClick={handleRemoves}>remove</button>
 </div>
     </div>
   )

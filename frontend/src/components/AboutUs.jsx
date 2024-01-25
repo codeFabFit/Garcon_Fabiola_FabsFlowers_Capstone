@@ -8,6 +8,7 @@ import Image from 'react-bootstrap/Image';
 const AboutUs = () => {
 
     const externalLink = "https://www.waitroseflorist.com/inspiration-and-advice/care-guides/caring-for-your-flowers";
+    
     const handleLearnMoreClick = () => {
         window.open(externalLink, '_blank');
       };

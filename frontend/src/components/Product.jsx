@@ -7,15 +7,15 @@ import  StoreContext from "../context-and-reducer/StoreContext";
 // import { StoreProvider } from "../context-and-reducer/StoreContext";
 
 function Product ({product}) {
-    const addToCart = useContext(StoreContext);
+    const {addToCart} = useContext(StoreContext);
 
 
 
     // addtocart is not a function error in console
-    const handleAddToCart = () => {
-        // e.preventDefault();
+    const handleAddToCart = (e) => {
+        e.preventDefault();
         console.log(product)
-       {addToCart}
+        addToCart;
     }
 
     return (
