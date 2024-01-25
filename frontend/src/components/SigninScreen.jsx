@@ -28,6 +28,8 @@ export function SigninScreen() {
     console.log(formData)
     e.preventDefault();
 
+  
+
     try {
       const { data } = await axios.post('http://localhost:5000/api/users/signin', {
         email: formData.email,
@@ -45,9 +47,11 @@ export function SigninScreen() {
     }
   };
 
+ 
   const { search } = useLocation();
   const redirectInUrl = new URLSearchParams(search).get('redirect');
   const redirect = redirectInUrl ? redirectInUrl : '/';
+
 
   return (
     <Container className="small-container">
